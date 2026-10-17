@@ -1,0 +1,36 @@
+{
+  "name": "research-paper-management-system",
+  "version": "1.0.0",
+  "description": "Production-ready MERN Stack Research Paper Management System",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "node server/server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"node server/server.js\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "seed": "node server/seeds/seed.js",
+    "test": "node --test server/tests/*.test.js"
+  },
+  "keywords": [
+    "mern",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs",
+    "crud",
+    "research-papers"
+  ],
+  "author": "Aravind Bala",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "supertest": "^7.3.1"
+  }
+}
